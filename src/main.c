@@ -10,6 +10,7 @@ int main(void) {
         // delay simulation
         for (volatile int i = 0; i < 1000000; ++i);
         printf("Toggling LED OFF\n");
+        printf("Toggling LED OFF\n");
         for (volatile int i = 0; i < 1000000; ++i);
     }
 
