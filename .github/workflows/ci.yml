@@ -21,3 +21,14 @@ jobs:
 
       - name: Build firmware
         run: make
+
+      - name: Generate .bin from .elf
+        run: arm-none-eabi-objcopy -O binary firmware.elf firmware.bin
+
+      - name: Upload firmware
+        uses: actions/upload-artifact@v4
+        with:
+        name: firmware
+        path: |
+        firmware.elf
+        firmware.bin
